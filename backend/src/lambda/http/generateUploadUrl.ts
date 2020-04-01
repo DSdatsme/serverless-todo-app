@@ -10,13 +10,11 @@ import * as AWSXRay from 'aws-xray-sdk'
 
 const XAWS = AWSXRay.captureAWS(AWS)
 
-// const dbClient = new AWS.DynamoDB.DocumentClient()
-// const todosTable = process.env.TODOS_TABLE
 const s3Bucket = process.env.S3_BUCKET
 const objectExpiration = process.env.SIGNED_URL_EXPIRATION
 const todosTable = process.env.TODOS_TABLE
 
-const dbClient = new AWS.DynamoDB.DocumentClient()
+const dbClient: AWS.DynamoDB.DocumentClient = XAWS.DynamoDB.DocumentClient()
 
 const s3 = new XAWS.S3({
   signatureVersion: 'v4'
