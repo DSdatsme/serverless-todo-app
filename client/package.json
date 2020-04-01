@@ -24,6 +24,7 @@
     "@types/react-router-dom": "^4.3.4",
     "@types/styled-components": "^4.1.18",
     "auth0-js": "^9.11.1",
+    "serverless-plugin-tracing": "^2.0.0",
     "typescript": "3.4.3"
   },
   "scripts": {
